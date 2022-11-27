@@ -18,7 +18,8 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off" // not required from React v17+
+    "react/react-in-jsx-scope": "off", // not required from React v17+
+    "@typescript-esling/no-empty-interface": "off"
   },
   "settings": {
     "react": {
