@@ -19,5 +19,10 @@
   "rules": {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off" // not required from React v17+
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
