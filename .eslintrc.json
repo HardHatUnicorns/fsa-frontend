@@ -25,12 +25,14 @@
     ],
 
     "react/react-in-jsx-scope": "off", // not required from React v17+
-    "@typescript-esling/no-empty-interface": "off",
-    "no-undef": ["error", { "allowJs": true }]
+    "@typescript-esling/no-empty-interface": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
+  },
+  "globals": {
+    "module": true
   }
 }
