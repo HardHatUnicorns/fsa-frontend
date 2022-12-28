@@ -2,14 +2,12 @@ import { FC } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageIcon from "@mui/icons-material/Language";
 import PersonIcon from "@mui/icons-material/Person";
+import { FullLogo } from "../FullLogo";
 
 export const Navbar: FC = () => {
   return (
     <div className="p-4 flex flex-row justify-between shadow-lg">
-      <div className="flex flex-row items-center gap-x-3">
-        <img className="h-10" src="src/assets/cinemon-logo.png" />
-        <img className="h-10" src="src/assets/cinemon-logo-text.png" />
-      </div>
+      <FullLogo />
       <div className="flex flex-row items-center gap-x-12">
         {/*https://tailwind-elements.com/docs/standard/forms/search/*/}
         <div className="xl:w-96">
