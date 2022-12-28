@@ -1,7 +1,5 @@
-import "./App.css";
-
 function App() {
-  return <div>test</div>;
+  return <div className="w-full text-center">test</div>;
 }
 
 export default App;
