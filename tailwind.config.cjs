@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "company-yellow": "#FFD502"
+        "company-yellow": "#FFD502",
       },
       backgroundColor: {
-        "company-yellow": "#FFD502"
-      }
+        "company-yellow": "#FFD502",
+      },
     },
   },
   plugins: [],
