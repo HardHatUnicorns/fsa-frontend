@@ -9,7 +9,7 @@ export const getAuthorizationToken = () =>
   readFromLocalStorage("CINEMON-TOKEN");
 
 export const isTokenExpired = (): boolean => {
-  const token = readFromLocalStorage("CINEMON-TOKEN");
+  const token: string = readFromLocalStorage("CINEMON-TOKEN");
   if (token) {
     const decodedToken: JwtToken = jwtDecode(token);
     const dateTime = new Date(decodedToken.exp * 1000);
@@ -24,7 +24,7 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (config: AxiosRequestConfig) => {
-    if (!isTokenExpired() && config?.headers) {
+    if (!isTokenExpired() && config.headers) {
       config.headers.Authorization = getAuthorizationToken();
     }
 

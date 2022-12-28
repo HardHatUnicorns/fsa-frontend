@@ -7,13 +7,9 @@ export const writeToLocalStorage = (key: string, data: unknown): boolean => {
   }
 };
 
-export const readFromLocalStorage = (key: string): unknown => {
-  try {
-    const value: string | null = localStorage.getItem(key);
-    return value !== null ? JSON.parse(value) : undefined;
-  } catch (error) {
-    return undefined;
-  }
+export const readFromLocalStorage = (key: string): string => {
+  const value: string | null = localStorage.getItem(key);
+  return value !== null ? JSON.parse(value) : undefined;
 };
 
 export const removeFromLocalStorage = (key: string): boolean => {
