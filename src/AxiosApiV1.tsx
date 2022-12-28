@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { readFromLocalStorage } from "./LocalStorage";
 import jwtDecode from "jwt-decode";
 import dayjs from "dayjs";
@@ -24,7 +24,7 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (config: AxiosRequestConfig) => {
-    if (!isTokenExpired()) {
+    if (!isTokenExpired() && config?.headers) {
       config.headers.Authorization = getAuthorizationToken();
     }
 
@@ -36,7 +36,7 @@ api.interceptors.request.use(
 );
 
 api.interceptors.response.use(
-  (response): any => {
+  (response): Promise<AxiosResponse> | AxiosResponse => {
     return response;
   },
   async (error) => {

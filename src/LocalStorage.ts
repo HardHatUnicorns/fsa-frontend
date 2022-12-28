@@ -1,4 +1,4 @@
-export const writeToLocalStorage = (key: string, data: any): boolean => {
+export const writeToLocalStorage = (key: string, data: unknown): boolean => {
   try {
     localStorage.setItem(key, JSON.stringify(data));
     return true;
@@ -7,7 +7,7 @@ export const writeToLocalStorage = (key: string, data: any): boolean => {
   }
 };
 
-export const readFromLocalStorage = (key: string): any => {
+export const readFromLocalStorage = (key: string): unknown => {
   try {
     const value: string | null = localStorage.getItem(key);
     return value !== null ? JSON.parse(value) : undefined;
@@ -16,7 +16,7 @@ export const readFromLocalStorage = (key: string): any => {
   }
 };
 
-export const removeFromLocalStorage = (key: string): any => {
+export const removeFromLocalStorage = (key: string): boolean => {
   try {
     localStorage.removeItem(key);
     return true;
