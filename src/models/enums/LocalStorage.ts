@@ -1,3 +1,3 @@
-export enum Token {
+export enum LocalStorage {
   TOKEN = "CINEMON-TOKEN",
 }
