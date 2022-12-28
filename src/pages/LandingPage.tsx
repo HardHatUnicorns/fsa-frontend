@@ -1,7 +1,14 @@
 import { FC } from "react";
 
+import { AllCinemas } from "../views/AllCinemas";
+
 const LandingPage: FC = () => {
-  return <div>Landing Page</div>;
+  return (
+    <div>
+      <p>Landing Page</p>
+      <AllCinemas />
+    </div>
+  );
 };
 
 export default LandingPage;

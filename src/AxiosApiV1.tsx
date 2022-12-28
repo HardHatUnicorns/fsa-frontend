@@ -19,7 +19,7 @@ export const isTokenExpired = (): boolean => {
 };
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API,
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 api.interceptors.request.use(
