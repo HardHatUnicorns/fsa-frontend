@@ -3,7 +3,7 @@
   height: 50vh;
   position: absolute;
 
-  border-color: transparent transparent transparent #FFD502;
+  border-color: transparent transparent transparent #ffd502;
   /*border-color: transparent transparent transparent red;*/
   cursor: pointer;
   transform: rotate(180deg);
