@@ -5,10 +5,8 @@ module.exports = {
     extend: {
       colors: {
         "company-yellow": "#FFD502",
-      },
-      backgroundColor: {
-        "company-yellow": "#FFD502",
-      },
+        variable: 'var(--company-yellow)'
+      }
     },
   },
   plugins: [],

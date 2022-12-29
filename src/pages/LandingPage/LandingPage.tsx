@@ -1,8 +1,7 @@
 import { FC } from "react";
-import { Navbar } from "../../components/shared/navbar/Navbar";
+import { Navbar } from "../../components/shared/Navbar/Navbar";
 import { AllCinemas } from "../../views/AllCinemas";
-import { Footer } from "../../components/shared/footer";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import { Footer } from "../../components/shared/Footer";
 import "./LandingPage.styles.css";
 
 export const LandingPage: FC = () => {

@@ -3,8 +3,7 @@
   height: 50vh;
   position: absolute;
 
-  border-color: transparent transparent transparent #ffd502;
-  /*border-color: transparent transparent transparent red;*/
+  border-color: transparent transparent transparent theme('colors.company-yellow');
   cursor: pointer;
   transform: rotate(180deg);
   right: 0;

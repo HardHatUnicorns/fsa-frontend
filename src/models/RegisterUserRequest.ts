@@ -5,7 +5,7 @@ export interface RegisterUserRequest {
   password?: string;
   name?: string;
   surname?: string;
-  gender?: Gender;
+  gender?: keyof typeof Gender;
   country?: string;
   dateOfBirth?: string;
 }

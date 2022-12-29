@@ -1,7 +1,7 @@
-import { removeFromLocalStorage } from "../LocalStorageService";
+import { removeFromLocalStorage } from "~/LocalStorageService";
 import axios from "axios";
-import { RegisterUserRequest } from "../models/RegisterUserRequest";
-import { LocalStorage } from "../models/enums/LocalStorage";
+import { RegisterUserRequest } from "~/models/RegisterUserRequest";
+import { LocalStorage } from "~/models/enums/LocalStorage";
 
 export const login = async (
   username: string,

@@ -1,15 +1,15 @@
 import { FC } from "react";
 import { FullLogo } from "../FullLogo";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { ReactComponent as FacebookIcon } from "~/assets/icons/FacebookIcon.svg";
+import { ReactComponent as TwitterIcon } from "~/assets/icons/TwitterIcon.svg";
+import { ReactComponent as InstagramIcon } from "~/assets/icons/InstagramIcon.svg";
+import { ReactComponent as LinkedInIcon } from "~/assets/icons/LinkedInIcon.svg";
 
 export const Footer: FC = () => {
   return (
     <div className="p-10 bg-company-yellow">
       <div className="pb-5">
-        <FullLogo></FullLogo>
+        <FullLogo logoClasses="fill-black"></FullLogo>
       </div>
       <div className="flex flex-col w-full border-t-2 border-black ">
         <div className="flex flex-row w-full justify-evenly pt-5 font-medium">

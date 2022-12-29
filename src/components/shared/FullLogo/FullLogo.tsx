@@ -1,11 +1,16 @@
 import { FC } from "react";
-import { Logo } from "../Logo";
+import { ReactComponent as CinemonLogo } from "~/assets/icons/CinemonLogo.svg";
+import { ReactComponent as CinemonLogoText } from "~/assets/icons/CinemonLogoText.svg";
 
-export const FullLogo: FC = () => {
+export interface FullLogoProps {
+  logoClasses?: string;
+}
+
+export const FullLogo: FC<FullLogoProps> = ({ logoClasses }) => {
   return (
     <div className="flex flex-row items-center gap-x-3">
-      <Logo />
-      <img className="h-10" src="src/assets/cinemon-logo-text.png" />
+      <CinemonLogo className={logoClasses} />
+      <CinemonLogoText />
     </div>
   );
 };
