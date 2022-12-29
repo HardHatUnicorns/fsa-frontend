@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "company-yellow": "#FFD502",
-        variable: 'var(--company-yellow)'
+        variable: "var(--company-yellow)"
       }
     },
   },
