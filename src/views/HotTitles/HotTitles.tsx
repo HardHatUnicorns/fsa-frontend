@@ -7,7 +7,7 @@ export const HotTitles = () => {
   const { data, status } = useQuery<Movie[]>("moviesNearYou", getMovies);
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center pt-5">
       <h1 className="text-2xl md:text-5xl lg:text-7xl text-center mb-6 lg:mb-12 font-bold">
         Hot titles right now
       </h1>

@@ -7,6 +7,8 @@ import { MovieDetails } from "./pages/MovieDetails";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { MoviesPage } from "~/pages/MoviesPage";
+import { CinemaFacilitiesPage } from "~/pages/CinemaFacilitiesPage";
+import { CinemaFacilityDetailsPage } from "~/pages/CinemaFacilityDetailsPage/CinemaFacilityDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
       {
         path: "movies/:movieId",
         element: <MovieDetails />,
+      },
+      {
+        path: "cinema-facilities/:cinemaId",
+        element: <CinemaFacilitiesPage />,
+      },
+      {
+        path: "cinema-facility/:facilityId",
+        element: <CinemaFacilityDetailsPage />,
       },
     ],
   },

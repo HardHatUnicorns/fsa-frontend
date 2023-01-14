@@ -11,7 +11,7 @@ export const AllCinemas = () => {
   );
 
   return (
-    <div className="flex flex-col justify-center align-baseline">
+    <div className="flex flex-col justify-center align-baseline pt-5">
       <h1 className="text-2xl md:text-5xl lg:text-7xl text-center mb-6 lg:mb-12 font-bold">
         Explore cinemas near you
       </h1>
@@ -21,7 +21,7 @@ export const AllCinemas = () => {
           <div className="flex justify-center md:mb-8 lg:mb-10">
             <div className="flex flex-col align-center md:flex-row">
               {data?.map(({ id, name, address }) => (
-                <CinemaCard key={id} name={name} url={address} />
+                <CinemaCard key={id} name={name} url={address} id={id} />
               ))}
             </div>
           </div>

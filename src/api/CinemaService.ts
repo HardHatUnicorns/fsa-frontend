@@ -10,14 +10,14 @@ export const getCinemas = async (): Promise<Cinema[]> => {
 };
 
 export const getCinemaDetails = async (
-  cinemaId: number
+  cinemaId: string | number
 ): Promise<CinemaDetails> => {
   const { data } = await api.get(`cinemas/${cinemaId}`);
   return data;
 };
 
 export const getCinemaFacilitiesByCinemaId = async (
-  cinemaId: number
+  cinemaId: string | number
 ): Promise<CinemaFacility[]> => {
   const { data } = await api.get(`cinemas/${cinemaId}/facilities`);
   return data;
@@ -25,10 +25,10 @@ export const getCinemaFacilitiesByCinemaId = async (
 
 export const getCinemaFacilityDetails = async (
   cinemaId: number,
-  facilityId: number
+  facilityId: number | string
 ): Promise<CinemaFacilityDetails> => {
   const { data } = await api.get(
-    `$cinemas/${cinemaId}/facilities/${facilityId}`
+    `cinemas/${cinemaId}/facilities/${facilityId}`
   );
   return data;
 };
