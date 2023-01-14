@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { Cinema } from "~/models/Cinema";
-import { getCinemas } from "~/services/CinemaService";
+import { getCinemas } from "~/api/CinemaService";
 import { CinemaCard } from "./CinemaCard";
 import { ReactComponent as ArrowDownIcon } from "~/assets/icons/ArrowDown.svg";
 
