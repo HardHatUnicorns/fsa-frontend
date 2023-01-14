@@ -1,31 +1,25 @@
-import axios from "axios";
 import { CinemaFacility } from "../models/CinemaFacility";
 import { CinemaFacilityDetails } from "../models/CinemaFacilityDetails";
 import { CinemaDetails } from "../models/CinemaDetails";
 import { Cinema } from "../models/Cinema";
+import { api } from "./AxiosApiV1";
 
 export const getCinemas = async (): Promise<Cinema[]> => {
-  const { data } = await axios.get(`${process.env.REACT_APP_API}cinemas`, {});
+  const { data } = await api.get("cinemas");
   return data;
 };
 
 export const getCinemaDetails = async (
   cinemaId: number
 ): Promise<CinemaDetails> => {
-  const { data } = await axios.get(
-    `${process.env.REACT_APP_API}cinemas/${cinemaId}`,
-    {}
-  );
+  const { data } = await api.get(`cinemas/${cinemaId}`);
   return data;
 };
 
 export const getCinemaFacilitiesByCinemaId = async (
   cinemaId: number
 ): Promise<CinemaFacility[]> => {
-  const { data } = await axios.get(
-    `${process.env.REACT_APP_API}cinemas/${cinemaId}/facilities`,
-    {}
-  );
+  const { data } = await api.get(`cinemas/${cinemaId}/facilities`);
   return data;
 };
 
@@ -33,9 +27,8 @@ export const getCinemaFacilityDetails = async (
   cinemaId: number,
   facilityId: number
 ): Promise<CinemaFacilityDetails> => {
-  const { data } = await axios.get(
-    `${process.env.REACT_APP_API}cinemas/${cinemaId}/facilities/${facilityId}`,
-    {}
+  const { data } = await api.get(
+    `$cinemas/${cinemaId}/facilities/${facilityId}`
   );
   return data;
 };
