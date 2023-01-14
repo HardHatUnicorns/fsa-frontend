@@ -1,11 +1,13 @@
 import { Movie } from "~/models/Movie";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./MovieCard.css";
 
 type MovieCardProps = Movie;
 
 export const MovieCard = ({ id, title, shortDescription }: MovieCardProps) => {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full max-w-[350px] h-[265px] flex flex-row bg-white shadow-xl rounded-lg">
       <img
@@ -20,11 +22,12 @@ export const MovieCard = ({ id, title, shortDescription }: MovieCardProps) => {
           </p>
         </div>
         <div className="grow flex justify-end align-bottom p-3">
-          <NavLink to={`movies/${id}`}>
-            <button className="p-2 bg-company-dark-grey text-white font-bold rounded-md">
-              Show more
-            </button>
-          </NavLink>
+          <button
+            className="p-2 bg-company-dark-grey text-white font-bold rounded-md"
+            onClick={() => navigate(`/movies/${id}`, { replace: true })}
+          >
+            Show more
+          </button>
         </div>
       </div>
     </div>
