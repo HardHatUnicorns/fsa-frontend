@@ -3,11 +3,9 @@ import { ReactComponent as SearchIcon } from "~/assets/icons/SearchIcon.svg";
 import { ReactComponent as LanguageIcon } from "~/assets/icons/LanguageIcon.svg";
 import { ReactComponent as PersonIcon } from "~/assets/icons/PersonIcon.svg";
 import { FullLogo } from "../FullLogo";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Navbar: FC = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="p-4 flex flex-row justify-between shadow-lg">
       <NavLink to={"/"}>
