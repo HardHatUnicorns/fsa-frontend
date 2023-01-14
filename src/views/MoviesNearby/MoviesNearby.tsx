@@ -5,7 +5,6 @@ import { Movie } from "~/models/Movie";
 
 export const MoviesNearby = () => {
   const { data, status } = useQuery<Movie[]>("moviesNearYou", getMovies);
-  console.log(data);
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -15,7 +14,7 @@ export const MoviesNearby = () => {
       <div className="max-w-7xl flex flex-row flex-wrap w-full gap-x-5 gap-y-5 justify-center align-baseline">
         {status === "loading" ? <p>Fetching movies near you...</p> : null}
         {status === "success"
-          ? data.map((it) => <MovieCard key={it.id} />)
+          ? data.map((movie) => <MovieCard key={movie.id} {...movie} />)
           : null}
         {status === "error" ? <p>Error fetching movies</p> : null}
       </div>
