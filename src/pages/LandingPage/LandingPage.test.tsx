@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react";
-import { LandingPage } from "./LandingPage";
+import { LandingPageDefault } from "./LandingPage";
 
-describe("<LandingPage />", () => {
+describe("<LandingPageDefault />", () => {
   it("should render", () => {
-    const { container } = render(<LandingPage />);
+    const { container } = render(<LandingPageDefault />);
     expect(container).toBeInTheDocument();
   });
 });
