@@ -20,7 +20,7 @@ export const MovieCard = ({ id, title, shortDescription }: MovieCardProps) => {
           </p>
         </div>
         <div className="grow flex justify-end align-bottom p-3">
-          <NavLink to={`movies/${id}`}>
+          <NavLink to={`/movies/${id}`}>
             <button className="p-2 bg-company-dark-grey text-white font-bold rounded-md">
               Show more
             </button>

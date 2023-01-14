@@ -1,9 +1,17 @@
 import { render } from "@testing-library/react";
-import { LandingPage } from "./LandingPage";
+import { vi } from "vitest";
+import { LandingPageDefault } from "./LandingPage";
 
-describe("<LandingPage />", () => {
+vi.mock("react-query", () => ({
+  useQuery: () => ({
+    data: [],
+    status: "success",
+  }),
+}));
+
+describe("<LandingPageDefault />", () => {
   it("should render", () => {
-    const { container } = render(<LandingPage />);
+    const { container } = render(<LandingPageDefault />);
     expect(container).toBeInTheDocument();
   });
 });

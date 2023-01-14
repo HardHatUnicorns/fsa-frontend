@@ -6,6 +6,7 @@ import { LandingPage, LandingPageDefault } from "./pages/LandingPage";
 import { MovieDetails } from "./pages/MovieDetails";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import { MoviesPage } from "~/pages/MoviesPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     element: <LandingPage />,
     children: [
       { path: "/", element: <LandingPageDefault /> },
+      { path: "/movies", element: <MoviesPage /> },
       {
         path: "movies/:movieId",
         element: <MovieDetails />,
