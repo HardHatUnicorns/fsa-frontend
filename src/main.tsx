@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage, LandingPageDefault } from "./pages/LandingPage";
-import { MovieDetails } from "./pages/MovieDetails";
+import { MovieDetailsPage } from "./pages/MovieDetails";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { MoviesPage } from "~/pages/MoviesPage";
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       { path: "/movies", element: <MoviesPage /> },
       {
         path: "movies/:movieId",
-        element: <MovieDetails />,
+        element: <MovieDetailsPage />,
       },
       {
         path: "cinema-facilities/:cinemaId",
