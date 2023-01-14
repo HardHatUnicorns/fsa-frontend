@@ -28,9 +28,9 @@ export const Navbar: FC = () => {
             </button>
           </div>
         </div>
-        <span className="cursor-pointer" onClick={() => navigate("/movies")}>
-          Movies
-        </span>
+        <NavLink to={"/movies"}>
+          <span>Movies</span>
+        </NavLink>
         <span className="cursor-pointer">Cinemas</span>
         <LanguageIcon className="cursor-pointer"></LanguageIcon>
         <PersonIcon className="cursor-pointer"></PersonIcon>
