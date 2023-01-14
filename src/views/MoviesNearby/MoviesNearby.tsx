@@ -4,7 +4,9 @@ import { MovieCard } from "~/components/shared/MovieCard/MovieCard";
 import { Movie } from "~/models/Movie";
 
 export const MoviesNearby = () => {
-  const { data, status } = useQuery<Movie[]>("moviesNearYou", getMovies);
+  const { data, status } = useQuery<Movie[]>("moviesNearYou", () =>
+    getMovies()
+  );
 
   return (
     <div className="w-full flex flex-col items-center pt-5">
