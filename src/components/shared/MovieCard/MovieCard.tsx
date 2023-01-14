@@ -1,18 +1,32 @@
-import { FC } from "react";
+import { Movie } from "~/models/Movie";
+import { NavLink } from "react-router-dom";
 
-export const MovieCard: FC = () => {
+import "./MovieCard.css";
+
+type MovieCardProps = Movie;
+
+export const MovieCard = ({ id, title, shortDescription }: MovieCardProps) => {
   return (
-    <a className="w-full h-full max-w-[19rem] border-2 flex flex-row">
-      <picture className="w-full h-full">
-        <img srcSet="https://via.placeholder.com/150x265.png" />
-      </picture>
-      <div className="p-3">
-        <h3 className="font-bold">title</h3>
-        <h3 className="font-bold">caption</h3>
-        <p>
-          desc ssdas d2asdas sdasda sssss a gdfgdf dfgd fgdffff gdfasjht fgfWE R
-        </p>
+    <div className="w-full max-w-[350px] h-[265px] flex flex-row bg-white shadow-xl rounded-lg">
+      <img
+        className="h-auto"
+        srcSet="https://via.placeholder.com/150x265.png"
+      />
+      <div className="flex flex-col">
+        <div className="p-3 shrink">
+          <h3 className="font-bold text-3xl title mb-1">{title}</h3>
+          <p className="text-sm description text-gray-400">
+            {shortDescription}
+          </p>
+        </div>
+        <div className="grow flex justify-end align-bottom p-3">
+          <NavLink to={`movies/${id}`}>
+            <button className="p-2 bg-company-dark-grey text-white font-bold rounded-md">
+              Show more
+            </button>
+          </NavLink>
+        </div>
       </div>
-    </a>
+    </div>
   );
 };
