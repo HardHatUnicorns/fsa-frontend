@@ -20,7 +20,7 @@ export const MoviesPage = () => {
         <div className="flex flex-row flex-wrap gap-y-5 gap-x-5 w-full pl-10">
           {status === "loading" ? <p>Fetching movies near you...</p> : null}
           {status === "success"
-            ? data.map((it) => <MovieCard key={it.id} />)
+            ? data.map((it) => <MovieCard key={it.id} {...it} />)
             : null}
           {status === "error" ? <p>Error fetching movies</p> : null}
         </div>
