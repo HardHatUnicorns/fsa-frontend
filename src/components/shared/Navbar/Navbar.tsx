@@ -3,11 +3,16 @@ import { ReactComponent as SearchIcon } from "~/assets/icons/SearchIcon.svg";
 import { ReactComponent as LanguageIcon } from "~/assets/icons/LanguageIcon.svg";
 import { ReactComponent as PersonIcon } from "~/assets/icons/PersonIcon.svg";
 import { FullLogo } from "../FullLogo";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar: FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="p-4 flex flex-row justify-between shadow-lg">
-      <FullLogo logoClasses="fill-company-yellow" />
+      <div onClick={() => navigate("/")} className="cursor-pointer">
+        <FullLogo logoClasses="fill-company-yellow" />
+      </div>
       <div className="flex flex-row items-center gap-x-12">
         <div className="xl:w-96">
           <div className="items-stretch w-full flex flex-row">
@@ -25,7 +30,9 @@ export const Navbar: FC = () => {
             </button>
           </div>
         </div>
-        <span className="cursor-pointer">Movies</span>
+        <span className="cursor-pointer" onClick={() => navigate("/movies")}>
+          Movies
+        </span>
         <span className="cursor-pointer">Cinemas</span>
         <LanguageIcon className="cursor-pointer"></LanguageIcon>
         <PersonIcon className="cursor-pointer"></PersonIcon>
