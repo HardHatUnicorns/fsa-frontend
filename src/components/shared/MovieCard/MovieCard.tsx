@@ -9,7 +9,7 @@ export const MovieCard = ({ id, title, shortDescription }: MovieCardProps) => {
   return (
     <div className="w-full max-w-[350px] h-[265px] flex flex-row bg-white shadow-xl rounded-lg">
       <img
-        className="h-auto"
+        className="h-auto rounded-l-lg"
         srcSet="https://via.placeholder.com/150x265.png"
       />
       <div className="flex flex-col">
