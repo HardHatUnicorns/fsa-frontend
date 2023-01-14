@@ -1,5 +1,5 @@
 export interface CinemaDetails {
-  name?: string;
-  address?: string;
-  url?: string;
+  name: string;
+  address: string;
+  url: string;
 }

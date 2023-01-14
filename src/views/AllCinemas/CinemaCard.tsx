@@ -1,14 +1,15 @@
+import { NavLink } from "react-router-dom";
+
 type CinemaCardProps = {
+  id: number;
   name: string;
   url: string;
 };
 
-export const CinemaCard = ({ name, url }: CinemaCardProps) => {
+export const CinemaCard = ({ name, url, id }: CinemaCardProps) => {
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
+    <NavLink
+      to={`/cinema-facilities/${id}`}
       className="py-6 md:py-0 px-0 md:px-8 lg:px-16"
     >
       <picture>
@@ -41,6 +42,6 @@ export const CinemaCard = ({ name, url }: CinemaCardProps) => {
           alt={name}
         />
       </picture>
-    </a>
+    </NavLink>
   );
 };
