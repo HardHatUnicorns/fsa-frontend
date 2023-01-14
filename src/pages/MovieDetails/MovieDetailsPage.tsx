@@ -12,12 +12,11 @@ export const MovieDetailsPage = () => {
     () => getMovieDetails(Number(movieId))
   );
 
-  console.log(data);
-
   return (
     <div className="bg-company-yellow p-2 lg:flex lg:flex-col lg:items-center lg:pt-16">
       {status === "loading" ? <p>Fetching movie details...</p> : null}
       {status === "success" ? <MovieDetails {...data} /> : null}
+      {status === "error" ? <p>Error fetching movie details</p> : null}
       <Tickets />
     </div>
   );
