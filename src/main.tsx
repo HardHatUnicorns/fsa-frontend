@@ -6,7 +6,7 @@ import { LandingPage, LandingPageDefault } from "./pages/LandingPage";
 import { MovieDetails } from "./pages/MovieDetails";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { MoviesPage } from "~/pages/MoviesPage/MoviesPage";
+import { MoviesPage } from "~/pages/MoviesPage";
 
 const router = createBrowserRouter([
   {
