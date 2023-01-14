@@ -9,7 +9,7 @@ import { Outlet } from "react-router-dom";
 
 export const LandingPage = () => {
   return (
-    <div className="w-full border-2 h-full relative">
+    <div className="w-full h-full relative">
       <Navbar />
       <Outlet />
       <Footer />

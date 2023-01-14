@@ -1,9 +1,9 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import { readFromLocalStorage } from "./LocalStorageService";
+import { readFromLocalStorage } from "../LocalStorageService";
 import jwtDecode from "jwt-decode";
 import dayjs from "dayjs";
-import { logoutUser } from "./api/AuthService";
-import { JwtToken } from "./models/JwtToken";
+import { logoutUser } from "./AuthService";
+import { JwtToken } from "../models/JwtToken";
 
 export const getAuthorizationToken = () =>
   readFromLocalStorage("CINEMON-TOKEN");
